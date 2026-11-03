@@ -7,7 +7,12 @@ app.get('/health', (_req, res) => {
     res.status(200).json({ ok: true });
 });
 
+
 //this is a modification comment
+app.get('/demo', (_req, res) => {
+    res.status(200).json({ demo: true });
+});
+
 
 app.post('/students', (req, res) => {
     const name = req.body?.name;
