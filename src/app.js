@@ -7,6 +7,10 @@ app.get('/health', (_req, res) => {
     res.status(200).json({ ok: true });
 });
 
+app.get('/demo', (_req, res) => {
+    res.status(200).json({ demo: true });
+});
+
 app.post('/students', (req, res) => {
     const name = req.body?.name;
     if (typeof name !== 'string' || !name.trim()) {
